@@ -5,10 +5,20 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Clientes": {
+    "/api/Clientes/{cliente}/cuentas": {
       "post": {
         "tags": [
           "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "cliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {

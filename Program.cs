@@ -1,5 +1,6 @@
 ﻿using PruebaTecnica.Controllers;
 using PruebaTecnica.Repositorios;
+using PruebaTecnica.Repositorys;
 
 namespace PruebaTecnica
 {
@@ -15,7 +16,8 @@ namespace PruebaTecnica
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<CuentaRepository>(); 
+            builder.Services.AddScoped<CuentaRepository>();
+            builder.Services.AddScoped<ClienteRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
